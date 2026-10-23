@@ -1,0 +1,151 @@
+/**
+ * tizishangwang.world - Dark Network Observatory Theme
+ * Designed according to Cloudflare Dashboard / Grafana Network Monitoring aesthetic
+ */
+
+:root {
+  --vp-c-brand-1: #38bdf8;
+  --vp-c-brand-2: #0284c7;
+  --vp-c-brand-3: #0369a1;
+  --vp-c-brand-soft: rgba(56, 189, 248, 0.14);
+
+  --vp-c-bg: #090d16;
+  --vp-c-bg-alt: #0d1527;
+  --vp-c-bg-elv: #0f172a;
+  --vp-c-bg-soft: #141f33;
+
+  --vp-c-border: #1e293b;
+  --vp-c-divider: #1e293b;
+  --vp-c-gutter: #0f172a;
+
+  --vp-c-text-1: #f8fafc;
+  --vp-c-text-2: #cbd5e1;
+  --vp-c-text-3: #94a3b8;
+
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+.dark {
+  --vp-c-bg: #070b13;
+  --vp-c-bg-alt: #0a0f1d;
+  --vp-c-bg-elv: #0f172a;
+}
+
+/* Document Body & Typography */
+body {
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f8fafc;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.vp-doc h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 10px;
+  margin-top: 48px;
+  margin-bottom: 18px;
+  color: #f1f5f9;
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.vp-doc p, .vp-doc li {
+  line-height: 1.75;
+  color: #cbd5e1;
+}
+
+.vp-doc strong {
+  color: #f8fafc;
+}
+
+/* Callout & Blockquotes: Answer-First styling */
+.vp-doc blockquote {
+  border-left: 4px solid #38bdf8;
+  background: #0d1527;
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 20px 0;
+  color: #e2e8f0;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+}
+
+/* Markdown Tables */
+.vp-doc table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 13px;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #090d16;
+}
+
+.vp-doc th {
+  background: #0f172a;
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 10px 14px;
+  border: 1px solid #1e293b;
+  text-align: left;
+}
+
+.vp-doc td {
+  padding: 10px 14px;
+  border: 1px solid #141f33;
+  color: #cbd5e1;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: #0b1120;
+}
+
+.vp-doc tr:hover {
+  background: #0f172a;
+}
+
+/* Inline Code & Code Blocks */
+.vp-doc :not(pre) > code {
+  background: #141f33;
+  color: #38bdf8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-family: var(--vp-font-family-mono);
+  border: 1px solid #1e293b;
+}
+
+/* Hero Badge */
+.hero-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: var(--vp-font-family-mono);
+  margin-bottom: 16px;
+}

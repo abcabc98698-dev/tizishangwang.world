@@ -9,7 +9,7 @@ export default defineConfig({
     hostname: 'https://tizishangwang.world'
   },
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/avatar.jpg' }],
     ['meta', { name: 'theme-color', content: '#090d16' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'keywords', content: '电脑翻墙, Windows科学上网, Windows梯子, Mac翻墙, Clash下载, v2rayN教程, 梯子上网, 机场推荐, IEPL专线' }],
@@ -31,6 +31,7 @@ export default defineConfig({
   ],
   themeConfig: {
     siteTitle: '梯子上网 (tizishangwang.world)',
+    logo: '/avatar.jpg',
     nav: [
       { text: '首页', link: '/' },
       { text: '电脑翻墙', link: '/pc/' },

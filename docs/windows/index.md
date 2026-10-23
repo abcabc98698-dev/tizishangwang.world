@@ -227,13 +227,54 @@ Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet
 
 本章节为「Windows 科学上网指南」的核心总纲，您可以横向联动以下专题以获得完整知识闭环：
 
-- 📖 **[电脑翻墙底层原理与全景选型指南](/pc/)**：深入探讨数据包应用层 Socket 转发与专线光缆拓扑。
-- 🍏 **[Mac 科学上网全景适配指南](/mac/)**：对比苹果 macOS 与 Windows 的代理机制差异与芯片兼容方案。
-- 📦 **[代理客户端下载与选型全景](/clients/)**：获取 Windows 各客户端免安装便携版与 SHA256 校验码。
-- 🏆 **[电脑梯子与机场推荐横评](/ladder/)**：基于 Windows 多设备并发与长时间挂机稳定性的梯队横评。
-- 🔍 **[28 个机场品牌技术横评](/airport/)**：查阅晚高峰 20:30 实测数据与详细套餐价格明细。
-- 🆓 **[免费机场与低成本方案解析](/free/)**：探究 Windows 免费节点的安全陷阱与合租拼车方案。
-- 🛠️ **[电脑网络问题诊断全书](/network-troubleshooting/)**：更多关于 Windows 终端代理环境变量、注册表修复与命令行脚本实战。
+<ClusterGrid
+  title="Windows 科学上网蜂巢式主题集群"
+  subtitle="串联各操作系统深度教程与具体技术实战"
+  :items="[
+    {
+      title: '电脑翻墙底层通信原理大系',
+      link: '/pc/',
+      badge: '底层解密',
+      description: '深入探讨数据包应用层 Socket 转发与虚拟网卡驱动差异，看懂专线不过 GFW 的物理链路。',
+      tags: ['TCP/UDP', 'VLESS', 'IEPL专线']
+    },
+    {
+      title: 'Mac 科学上网全景适配大系',
+      link: '/mac/',
+      badge: '苹果生态',
+      description: '针对 Apple Silicon M 系列芯片的原生客户端适配、Zsh 终端加速与 Network Extension。',
+      tags: ['ARM64', 'Surge', 'Homebrew']
+    },
+    {
+      title: '代理客户端官方下载与选型',
+      link: '/clients/',
+      badge: '工具矩阵',
+      description: '获取 Clash Verge Rev、v2rayN、FlClash 原生安装包及 SHA256 校验和。',
+      tags: ['Clash Verge', 'GitHub', 'FlClash']
+    },
+    {
+      title: '2026 电脑梯子场景选型推荐',
+      link: '/ladder/',
+      badge: '选型决策',
+      description: '基于长时间实测的跨境办公、流媒体、多设备并发与超低预算月付选型横评。',
+      tags: ['梯子推荐', '性价比', '办公专线']
+    },
+    {
+      title: '2026 机场深度横评超级单页',
+      link: '/airport/',
+      badge: '品牌全景',
+      description: '查阅 28 个知名机场品牌数据库、晚高峰压力测试遥测与流媒体/AI 解锁可用性。',
+      tags: ['28品牌', '晚高峰测速', '原生IP']
+    },
+    {
+      title: '电脑网络故障排障全书',
+      link: '/network-troubleshooting/',
+      badge: '排障急救',
+      description: '系统化解决电脑开代理打不开网页、本地 7890 端口冲突、DNS 污染与 hosts 锁死。',
+      tags: ['端口冲突', '注册表修复', 'DNS']
+    }
+  ]"
+/>
 
 ---
 

@@ -9,6 +9,7 @@ import TopologyView from './components/TopologyView.vue';
 import BrandComparisonTable from './components/BrandComparisonTable.vue';
 import AsciiDecisionTree from './components/AsciiDecisionTree.vue';
 import FaqSection from './components/FaqSection.vue';
+import ClusterGrid from './components/ClusterGrid.vue';
 
 export default {
   extends: DefaultTheme,
@@ -20,5 +21,6 @@ export default {
     app.component('BrandComparisonTable', BrandComparisonTable);
     app.component('AsciiDecisionTree', AsciiDecisionTree);
     app.component('FaqSection', FaqSection);
+    app.component('ClusterGrid', ClusterGrid);
   }
 } satisfies Theme;

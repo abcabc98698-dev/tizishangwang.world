@@ -188,13 +188,54 @@ WebRTC 是浏览器内置的实时通信协议。即使电脑开启了系统代�
 
 本章节为「电脑翻墙知识大系」的总纲入口，若您需要进一步探索系统级细分配置与实操，请深入以下专题：
 
-- 💻 **[Windows 科学上网万字宝典](/windows/)**：深度拆解 Windows 11/10 下 TUN 虚拟网卡实战、解除 UWP 回环隔离限制与 7 大典型断网排障。
-- 🍏 **[Mac 科学上网指南](/mac/)**：针对苹果 Apple Silicon M 系列芯片的原生客户端适配与 Network Extension 权限管理。
-- 📦 **[代理客户端下载与选型全景](/clients/)**：获取 Clash Verge Rev、v2rayN、FlClash、Hiddify 官方源码包与参数配置手册。
-- 🏆 **[电脑梯子综合推荐与选型](/ladder/)**：长时间跨境稳定办公、低预算月付与多设备共享梯子横评。
-- 🔍 **[机场推荐与深度横评大系](/airport/)**：查阅 28 个知名机场品牌数据库与晚高峰实测数据报告。
-- 🆓 **[免费机场与低成本方案解析](/free/)**：客观审视免费节点的安全边界与低预算替代方案。
-- 🛠️ **[电脑网络问题诊断全书](/network-troubleshooting/)**：关掉梯子无法上网、7890 端口冲突与 DNS 崩溃急救恢复。
+<ClusterGrid
+  title="电脑翻墙知识大系蜂巢式主题集群"
+  subtitle="串联各操作系统配置教程与网络排障专栏"
+  :items="[
+    {
+      title: 'Windows 科学上网实战宝典',
+      link: '/windows/',
+      badge: 'Windows专栏',
+      description: '掌握 Windows 11/10 下 Clash Verge Rev 服务模式配置、TUN 虚拟网卡与 7 大断网急救。',
+      tags: ['Win11', 'TUN模式', 'Wintun']
+    },
+    {
+      title: 'Mac 科学上网全景适配大系',
+      link: '/mac/',
+      badge: '苹果生态',
+      description: '针对 Apple Silicon M 系列芯片的原生客户端适配、Zsh 终端加速与 Network Extension。',
+      tags: ['ARM64', 'Surge', 'Homebrew']
+    },
+    {
+      title: '代理客户端官方下载与选型',
+      link: '/clients/',
+      badge: '工具矩阵',
+      description: '获取 Clash Verge Rev、v2rayN、FlClash 原生安装包及 SHA256 校验和。',
+      tags: ['Clash Verge', 'GitHub', 'FlClash']
+    },
+    {
+      title: '2026 电脑梯子场景选型推荐',
+      link: '/ladder/',
+      badge: '选型决策',
+      description: '基于长时间实测的跨境办公、流媒体、多设备并发与超低预算月付选型横评。',
+      tags: ['梯子推荐', '性价比', '办公专线']
+    },
+    {
+      title: '2026 机场深度横评超级单页',
+      link: '/airport/',
+      badge: '品牌全景',
+      description: '查阅 28 个知名机场品牌数据库、晚高峰压力测试遥测与流媒体/AI 解锁可用性。',
+      tags: ['28品牌', '晚高峰测速', '原生IP']
+    },
+    {
+      title: '电脑网络故障排障全书',
+      link: '/network-troubleshooting/',
+      badge: '排障急救',
+      description: '系统化解决电脑开代理打不开网页、本地 7890 端口冲突、DNS 污染与 hosts 锁死。',
+      tags: ['端口冲突', '注册表修复', 'DNS']
+    }
+  ]"
+/>
 
 ---
 

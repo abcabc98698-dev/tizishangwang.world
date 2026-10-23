@@ -160,13 +160,68 @@ import { AIRPORTS } from './data/airports';
                        👉 [前往 /ladder/]             👉 [前往 /network-troubleshooting/]
 ```
 
-- 📖 **[电脑翻墙知识大系](/pc/)**：深入探讨应用层代理与底层网络通信差异，解密 IEPL 专线光缆物理拓扑。
-- 💻 **[Windows 科学上网指南](/windows/)**：涵盖 Windows 11/10 系统代理、TUN 模式配置、UWP 隔离解除与 7 大断网故障排查。
-- 🍏 **[Mac 科学上网指南](/mac/)**：针对 Apple Silicon M1-M4 芯片原生优化，解决 macOS 权限授权与局域网 AirDrop 兼容冲突。
-- 🚀 **[代理客户端下载与选型](/clients/)**：全面梳理 Clash Verge Rev、v2rayN、FlClash、Hiddify 官方源码下载与配置教程。
-- 🏆 **[电脑梯子与机场推荐](/ladder/)**：基于长时间实测的办公、流媒体、多设备并发选型横评。
-- 🆓 **[免费机场与低成本方案](/free/)**：剖析公共免费节点的安全隐患，提供低预算平民替代策略。
-- 🛠️ **[电脑网络问题诊断全书](/network-troubleshooting/)**：系统化解决电脑开代理打不开网页、本地端口冲突、DNS 污染等顽疾。
+<ClusterGrid
+  title="全网蜂巢式深度主题集群导航 (Topic Cluster Navigation)"
+  subtitle="全景打通 9 大一级栏目、80+ 二级专题与跨平台实战"
+  :items="[
+    {
+      title: '电脑翻墙底层通信原理大系',
+      link: '/pc/',
+      badge: '原理与协议',
+      description: '深入探讨数据包应用层 Socket 转发与虚拟网卡驱动差异，解密 IEPL 跨境专线光缆物理拓扑。',
+      tags: ['TCP/UDP', 'VLESS', 'IEPL专线']
+    },
+    {
+      title: 'Windows 科学上网实战宝典',
+      link: '/windows/',
+      badge: 'Windows专栏',
+      description: '涵盖 Windows 11/10 系统代理、TUN 模式配置、UWP 隔离解除与 7 大断网故障排查。',
+      tags: ['Win11', 'TUN模式', 'Wintun']
+    },
+    {
+      title: 'Mac 科学上网全景适配大系',
+      link: '/mac/',
+      badge: '苹果生态',
+      description: '针对 Apple Silicon M1-M4 芯片原生优化，解决 macOS 权限授权与局域网 AirDrop 兼容冲突。',
+      tags: ['ARM64', 'Surge', 'Homebrew']
+    },
+    {
+      title: '代理客户端官方下载与选型',
+      link: '/clients/',
+      badge: '工具矩阵',
+      description: '全面梳理 Clash Verge Rev、v2rayN、FlClash、Hiddify 官方源码下载与配置教程。',
+      tags: ['Clash Verge', 'GitHub', 'FlClash']
+    },
+    {
+      title: '2026 电脑梯子场景选型推荐',
+      link: '/ladder/',
+      badge: '选型决策',
+      description: '基于长时间实测的跨境办公、流媒体、多设备并发与超低预算月付选型横评。',
+      tags: ['梯子推荐', '性价比', '办公专线']
+    },
+    {
+      title: '2026 机场深度横评超级单页',
+      link: '/airport/',
+      badge: '品牌全景',
+      description: '查阅 28 个知名机场品牌数据库、晚高峰压力测试遥测与流媒体/AI 解锁可用性。',
+      tags: ['28品牌', '晚高峰测速', '原生IP']
+    },
+    {
+      title: '免费机场与低成本方案解析',
+      link: '/free/',
+      badge: '风险警示',
+      description: '深度剖析免费节点的安全隐患与黑客钓鱼陷阱，提供 7 元档平民替代策略。',
+      tags: ['免费节点', '黑客蜜罐', '平民替代']
+    },
+    {
+      title: '电脑网络故障排障全书',
+      link: '/network-troubleshooting/',
+      badge: '排障急救',
+      description: '系统化解决电脑开代理打不开网页、本地 7890 端口冲突、DNS 污染与 hosts 锁死。',
+      tags: ['端口冲突', '注册表修复', 'DNS']
+    }
+  ]"
+/>
 
 ---
 

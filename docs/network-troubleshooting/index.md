@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: 电脑网络问题与排障全书：设置了代理却不能上网？七大常见故障深度排查 - tizishangwang.world
+title: 电脑网络问题与排障全书：设置了代理却不能上网？七大常见故障深度排查大系 - tizishangwang.world
 description: 电脑网络故障终极诊断指南，全面解决电脑设置了代理却不能上网、关掉梯子无法打开网页、本地端口冲突、DNS污染与手机能连电脑连不上等顽疾。
 head:
   - - meta
     - name: keywords
-      content: 电脑设置了代理不能上网, 电脑翻墙打不开网页, 梯子关掉打不开网页, 电脑网络排障, 手机能连电脑连不上, Clash报错
+      content: 电脑设置了代理不能上网, 电脑翻墙打不开网页, 梯子关掉打不开网页, 电脑网络排障, 手机能连电脑连不上, Clash报错, 网络排障大全
 ---
 
 <script setup>
@@ -16,7 +16,7 @@ import { AIRPORTS } from '../data/airports';
   <span>🛠️ TOPIC CLUSTER: 电脑网络问题诊断全书 | 故障树与急救方案库</span>
 </div>
 
-# 电脑网络问题与排障全书：设置了代理却不能上网？七大常见故障深度排查
+# 电脑网络问题与排障全书：设置了代理却不能上网？七大常见故障深度排查大系
 
 > **【Answer-First 急救速查表】**  
 > - **症状 1：关掉翻墙软件后，电脑彻底打不开网页，微信却能发消息？**  
@@ -58,10 +58,11 @@ import { AIRPORTS } from '../data/airports';
   1. 按下快捷键 `Win + I` 打开 Windows 设置。
   2. 进入「网络和 Internet」→「代理」。
   3. 在「手动设置代理」下方，找到「使用代理服务器」，将其开关切换为 **【关】**。
+  4. 或者按下 `Win + R` 输入 `inetcpl.cpl`，在「连接 → 局域网设置」中取消勾选「为 LAN 使用代理服务器」。
 
 ---
 
-### 故障 2：为什么手机连同一个机场可以翻墙，电脑却不行？
+### 故障 2：为什么同一条机场订阅手机秒连，电脑却死活连不上？
 这是新手最为高频的困惑，主要源于电脑与手机的系统网络底层存在巨大鸿沟：
 
 | 影响因素 | 手机系统 (iOS / Android) | 电脑系统 (Windows / macOS) |
@@ -79,7 +80,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-### 故障 4：本地 7890 / 7897 端口冲突
+### 故障 4：本地 7890 / 7897 端口冲突报错
 - **底层成因**：由于 7890 是各大 Clash 系客户端的默认端口，若后台遗留了未完全退出的旧进程，新启动的客户端将无法绑定该端口，并在内核日志中打印 `bind: address already in use`。
 - **命令行诊断与查杀**：
 ```powershell
@@ -89,7 +90,7 @@ netstat -ano | findstr :7890
 # 强制终止该占用进程 (假设 PID 为 1234)
 taskkill /F /PID 1234
 ```
-或者直接在客户端界面将端口修改为不常用的 `7899`。
+或者直接在客户端界面将端口修改为不常用的 `7899` 或 `10808`。
 
 ---
 
@@ -126,25 +127,67 @@ shutdown -r -t 0
 
 ---
 
-## 三、排障与高可用梯子推荐
+## 三、排障与高可用专线梯子推荐档案
 
 为了杜绝因线路服务商跑路或长期断流而陷入无休止的排障折腾，强烈建议选用具备企业级高可用保障的专线服务：
 
+### 1. 高可用专线代表：光速云 —— 双专线容灾不掉线
+
 <AirportCard :brand="AIRPORTS[0]" />
+
+- **推荐理由**：IEPL 专线 + 企业级内网专线双架构，即便某条光缆检修也能秒级容灾。香港延迟 22ms，年付折算仅 8 元/月（优惠码 `AMM`）。
+
+### 2. 零折腾极简代表：飞猫云 —— 免配订阅一键客户端
 
 <AirportCard :brand="AIRPORTS[1]" />
 
+- **推荐理由**：配备 Windows 和 Mac 专用开箱即用桌面客户端，不用配订阅、不用调端口，极大幅度减少新手排障概率。学生版年付 84 元（优惠码 `flycat888`）。
+
 ---
 
-## 四、全网蜂巢式内链导航与 FAQ
+## 四、全网蜂巢式内链导航矩阵 (Topic Cluster Hub)
 
-- 📖 **[电脑翻墙底层原理与全景选型指南](/pc/)**
-- 💻 **[Windows 科学上网实战宝典](/windows/)**
-- 🍏 **[Mac 科学上网全景适配指南](/mac/)**
-- 📦 **[代理客户端下载与选型全景](/clients/)**
+<ClusterGrid
+  title="电脑网络排障全书蜂巢式主题集群"
+  subtitle="串联各操作系统深度教程与具体技术实战"
+  :items="[
+    {
+      title: 'Windows 科学上网实战宝典',
+      link: '/windows/',
+      badge: '深度教程',
+      description: '掌握 Windows 11/10 下 Clash Verge Rev 服务模式配置、TUN 虚拟网卡与 UWP 解除隔离。',
+      tags: ['Win11', 'TUN模式', 'Wintun']
+    },
+    {
+      title: 'Mac 科学上网全景适配大系',
+      link: '/mac/',
+      badge: '苹果生态',
+      description: '针对 Apple Silicon M1-M4 芯片的原生客户端适配与 Network Extension 权限管理。',
+      tags: ['ARM64', 'Surge', 'Homebrew']
+    },
+    {
+      title: '电脑翻墙底层通信原理大系',
+      link: '/pc/',
+      badge: '底层解密',
+      description: '深入了解数据包应用层 Socket 与虚拟网卡驱动差异，看懂专线不过 GFW 的物理链路。',
+      tags: ['TCP/UDP', 'VLESS', 'IEPL专线']
+    },
+    {
+      title: '代理客户端官方下载与选型',
+      link: '/clients/',
+      badge: '工具矩阵',
+      description: '获取 Clash Verge Rev、v2rayN、FlClash 原生安装包及 SHA256 校验和。',
+      tags: ['Clash Verge', 'GitHub', 'FlClash']
+    }
+  ]"
+/>
+
+---
+
+## 五、电脑网络排障常见高频疑难解答 (FAQ)
 
 <FaqSection
-  title="电脑网络排障常见问答"
+  title="电脑网络排障核心疑难解答"
   :items="[
     {
       question: '为什么开启 TUN 模式后，电脑 CPU 占用率会升高？',
@@ -155,6 +198,15 @@ shutdown -r -t 0
       question: '电脑休眠后唤醒，为什么梯子节点全部连接失败？',
       directAnswer: '系统休眠会导致操作系统网卡进入低功耗状态并重置物理连接，客户端持有的旧 TCP Socket 已经失效。',
       detailedExplanation: '<p>无需重启电脑，只需在客户端主界面将代理开关关闭后等待 2 秒再重新打开，即可触发客户端与海外机房建立全新的 TLS 握手恢复连接。</p>'
+    },
+    {
+      question: '为什么连上梯子后能看 YouTube，但 Google 搜寻频繁跳人机验证码？',
+      directAnswer: '这是由于节点出口 IP 的信誉评级被滥用，被 Google 识别为机房爬虫。',
+      detailedExplanation: '<p>在客户端中将节点切换至具备「原生 IP」属性的香港、台湾或新加坡节点；或者避免使用公共免费节点。像微风网络或光速云的原生节点几乎不会触发 Google 验证码。</p>'
     }
   ]"
 />
+
+---
+
+*知识库由 tizishangwang.world 实验室持续维护更新。最后同步时间：2026-10-23。*

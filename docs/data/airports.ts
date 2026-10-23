@@ -241,6 +241,48 @@ export const AIRPORTS: AirportBrand[] = [
     summary: '强调跨设备协同与客服响应速度，适合需要 Windows 与 Mac 多台电脑同时挂载网络工具的远程工作者及外贸团队。'
   },
   {
+    id: 'dalaoyun',
+    name: '大佬云 (dalaoyun)',
+    rank: 5,
+    featured: false,
+    tagline: '5.6元档标准 IEPL + VLESS 入门方案',
+    foundedYear: '2024',
+    protocol: 'VLESS',
+    lineType: 'IEPL专线',
+    startingPrice: '¥5.6/月（年付折算）',
+    promoCode: 'dly888',
+    promoDiscount: '季付及以上 7 折',
+    affiliateUrl: 'https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN',
+    clientSupport: ['自研客户端', 'Clash Verge Rev', 'v2rayN'],
+    streamingUnlocks: {
+      chatgpt: 'supported',
+      claude: 'supported',
+      gemini: 'partial',
+      netflix: 'supported',
+      disney: 'supported',
+      youtube: 'supported',
+      tiktok: 'supported'
+    },
+    features: [
+      '极低年付均价：年付约5.6元/月（60GB/月）',
+      '全线采用 IEPL 专线传输 + VLESS 协议',
+      '自研客户端与标准第三方通用订阅双轨支持'
+    ],
+    disadvantages: [
+      '月均 60GB 流量较小，重度追剧用户需加购',
+      '同价位规格与闪电鼠、云界线相似，无显著独家技术壁垒'
+    ],
+    plans: [
+      { name: '轻巧包', billing: '年付', price: '¥68/年', traffic: '60GB/月', period: '每月重置' }
+    ],
+    speedRecords: [
+      { region: '香港 IEPL', latency: '24ms', download: '490Mbps', testDate: '2026-10-19' },
+      { region: '日本 节点', latency: '58ms', download: '120Mbps', testDate: '2026-10-19' }
+    ],
+    verifiedDate: '2026-10-19',
+    summary: '定位于 5.6 元极低预算档位，适合学生群体与极轻度查阅文档的备用梯子。'
+  },
+  {
     id: 'xingdaomeng',
     name: '星岛梦 (xingdaomeng)',
     rank: 6,
@@ -288,6 +330,51 @@ export const AIRPORTS: AirportBrand[] = [
     ],
     verifiedDate: '2026-10-19',
     summary: '以不限设备数量和全线统一 1.0 倍率为核心差异化，长年保持稳定表现，是多设备用户的坚实备选。'
+  },
+  {
+    id: 'ermao',
+    name: '二猫云 (ermao)',
+    rank: 7,
+    featured: false,
+    tagline: '纯 IEPL 专线，不限设备，主打长期稳定',
+    foundedYear: '2023',
+    protocol: 'VLESS',
+    lineType: '全线 IEPL 专线',
+    startingPrice: '¥20/月（白猫套餐）',
+    promoCode: 'ermao5555',
+    promoDiscount: '限时优惠码',
+    affiliateUrl: 'https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW',
+    clientSupport: ['独家定制客户端', 'Clash Verge Rev', 'v2rayN'],
+    streamingUnlocks: {
+      chatgpt: 'supported',
+      claude: 'partial',
+      gemini: 'partial',
+      netflix: 'supported',
+      disney: 'supported',
+      youtube: 'supported',
+      tiktok: 'supported'
+    },
+    features: [
+      '不做低价走量与跑路盘，专注长期稳定性',
+      '全线采用 IEPL 专线直连，账号不限制设备连接数',
+      '海外专业团队主理，配备专属定制客户端'
+    ],
+    disadvantages: [
+      '入门月付 20 元起步，单价稍高于普通中转',
+      '节点未包含新加坡节点，主打香港、日本、美国'
+    ],
+    plans: [
+      { name: '白猫套餐', billing: '月付', price: '¥20/月', traffic: '130GB/月', period: '每月重置' },
+      { name: '橘猫畅玩版', billing: '月付', price: '¥40/月', traffic: '230GB/月', period: '每月重置' },
+      { name: '不限时套餐', billing: '一次性', price: '¥99', traffic: '100GB', period: '永久不过期' }
+    ],
+    speedRecords: [
+      { region: '香港 IEPL', latency: '22ms', download: '481Mbps', testDate: '2026-10-19' },
+      { region: '日本 专线', latency: '53ms', download: '143Mbps', testDate: '2026-10-19' },
+      { region: '美国 落地', latency: '134ms', download: '17Mbps', testDate: '2026-10-19' }
+    ],
+    verifiedDate: '2026-10-19',
+    summary: '主打长期不降速的专线品质，适合看重稳定、不希望频繁折腾换机场的品质型用户。'
   },
   {
     id: 'wuyou',

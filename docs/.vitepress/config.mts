@@ -18,19 +18,45 @@ export default defineConfig({
     ['meta', { name: 'keywords', content: '电脑翻墙, Windows科学上网, Windows梯子, Mac翻墙, Clash下载, v2rayN教程, 梯子上网, 机场推荐, IEPL专线' }],
     ['meta', { name: 'google-site-verification', content: 'google-site-verification-tizishangwang' }],
     ['meta', { name: 'msvalidate.01', content: 'bing-verification-tizishangwang' }],
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-tizishangwang' }],
+    ['meta', { name: 'shenma-site-verification', content: 'shenma-verification-tizishangwang' }],
+    ['meta', { name: '360-site-verification', content: '360-verification-tizishangwang' }],
+    ['meta', { property: 'og:site_name', content: '梯子上网 (tizishangwang.world)' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { property: 'og:image', content: 'https://tizishangwang.world/avatar.jpg' }],
+    ['meta', { property: 'og:image:alt', content: '梯子上网 - 电脑翻墙与科学上网指南' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://tizishangwang.world/avatar.jpg' }],
     [
       'script',
       { type: 'application/ld+json' },
       JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: '梯子上网 tizishangwang.world',
-        url: 'https://tizishangwang.world',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://tizishangwang.world/?q={search_term_string}',
-          'query-input': 'required name=search_term_string'
-        }
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            '@id': 'https://tizishangwang.world/#website',
+            url: 'https://tizishangwang.world/',
+            name: '梯子上网 tizishangwang.world',
+            description: '电脑翻墙与 Windows/Mac 科学上网权威指南，提供 Clash Verge Rev、v2rayN 客户端配置、IEPL 专线机场实测与网络故障排查方案。',
+            publisher: {
+              '@id': 'https://tizishangwang.world/#organization'
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://tizishangwang.world/?q={search_term_string}',
+              'query-input': 'required name=search_term_string'
+            }
+          },
+          {
+            '@type': 'Organization',
+            '@id': 'https://tizishangwang.world/#organization',
+            name: '梯子上网评测实验室',
+            url: 'https://tizishangwang.world/',
+            logo: 'https://tizishangwang.world/avatar.jpg'
+          }
+        ]
       })
     ]
   ],
@@ -47,10 +73,104 @@ export default defineConfig({
     }
 
     pageData.frontmatter.head ??= [];
+
+    // 规范化自引用 Canonical URL
     pageData.frontmatter.head.push([
       'link',
       { rel: 'canonical', href: canonicalUrl }
     ]);
+
+    // Open Graph 与 Twitter 元数据动态注入
+    pageData.frontmatter.head.push([
+      'meta',
+      { property: 'og:url', content: canonicalUrl }
+    ]);
+    const fullTitle = pageData.title ? `${pageData.title} | 梯子上网` : '梯子上网 | tizishangwang.world';
+    pageData.frontmatter.head.push([
+      'meta',
+      { property: 'og:title', content: fullTitle }
+    ]);
+    pageData.frontmatter.head.push([
+      'meta',
+      { name: 'twitter:title', content: fullTitle }
+    ]);
+
+    if (pageData.description) {
+      pageData.frontmatter.head.push([
+        'meta',
+        { property: 'og:description', content: pageData.description }
+      ]);
+      pageData.frontmatter.head.push([
+        'meta',
+        { name: 'twitter:description', content: pageData.description }
+      ]);
+    }
+
+    // 为所有非首页且非内部架构白皮书的页面自动注入 BreadcrumbList 结构化数据
+    if (cleanPath !== 'index.md' && cleanPath !== 'site-architecture.md') {
+      const categoryNames: Record<string, string> = {
+        pc: '电脑翻墙',
+        windows: 'Windows科学上网',
+        mac: 'Mac科学上网',
+        clients: '客户端下载',
+        ladder: '梯子推荐',
+        airport: '机场推荐',
+        free: '免费机场',
+        'network-troubleshooting': '电脑网络排障',
+        about: '关于我们',
+        methodology: '评测方法论',
+        disclosure: '商业推广披露',
+        privacy: '用户隐私政策',
+        terms: '服务使用条款'
+      };
+
+      const parts = cleanPath.split('/');
+      const breadcrumbItems = [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '首页',
+          item: 'https://tizishangwang.world/'
+        }
+      ];
+
+      if (parts.length === 1) {
+        const key = parts[0].replace(/\.md$/, '');
+        breadcrumbItems.push({
+          '@type': 'ListItem',
+          position: 2,
+          name: pageData.title || categoryNames[key] || key,
+          item: canonicalUrl
+        });
+      } else if (parts.length === 2) {
+        const catKey = parts[0];
+        breadcrumbItems.push({
+          '@type': 'ListItem',
+          position: 2,
+          name: categoryNames[catKey] || catKey,
+          item: `https://tizishangwang.world/${catKey}/`
+        });
+
+        if (parts[1] !== 'index.md') {
+          breadcrumbItems.push({
+            '@type': 'ListItem',
+            position: 3,
+            name: pageData.title || '技术指南',
+            item: canonicalUrl
+          });
+        }
+      }
+
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: breadcrumbItems
+        })
+      ]);
+    }
   },
   themeConfig: {
     siteTitle: '梯子上网 (tizishangwang.world)',

@@ -1,4 +1,18 @@
+# tizishangwang.world Robots Policy
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
 User-agent: *
 Allow: /
+Disallow: /site-architecture
 
 Sitemap: https://tizishangwang.world/sitemap.xml

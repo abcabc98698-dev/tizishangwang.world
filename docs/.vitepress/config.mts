@@ -6,13 +6,18 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://tizishangwang.world'
+    hostname: 'https://tizishangwang.world',
+    transformItems(items) {
+      return items.filter((item) => !item.url.includes('site-architecture'));
+    }
   },
   head: [
     ['link', { rel: 'icon', href: '/avatar.jpg' }],
     ['meta', { name: 'theme-color', content: '#090d16' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'keywords', content: '电脑翻墙, Windows科学上网, Windows梯子, Mac翻墙, Clash下载, v2rayN教程, 梯子上网, 机场推荐, IEPL专线' }],
+    ['meta', { name: 'google-site-verification', content: 'google-site-verification-tizishangwang' }],
+    ['meta', { name: 'msvalidate.01', content: 'bing-verification-tizishangwang' }],
     [
       'script',
       { type: 'application/ld+json' },
@@ -29,6 +34,24 @@ export default defineConfig({
       })
     ]
   ],
+  transformPageData(pageData) {
+    const cleanPath = pageData.relativePath.replace(/\\/g, '/');
+    let canonicalUrl = 'https://tizishangwang.world/';
+
+    if (cleanPath === 'index.md') {
+      canonicalUrl = 'https://tizishangwang.world/';
+    } else if (cleanPath.endsWith('/index.md')) {
+      canonicalUrl = `https://tizishangwang.world/${cleanPath.replace(/\/index\.md$/, '/')}`;
+    } else {
+      canonicalUrl = `https://tizishangwang.world/${cleanPath.replace(/\.md$/, '')}`;
+    }
+
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ]);
+  },
   themeConfig: {
     siteTitle: '梯子上网 (tizishangwang.world)',
     logo: '/avatar.jpg',
@@ -41,7 +64,17 @@ export default defineConfig({
       { text: '梯子推荐', link: '/ladder/' },
       { text: '机场推荐', link: '/airport/' },
       { text: '免费机场', link: '/free/' },
-      { text: '电脑网络排障', link: '/network-troubleshooting/' }
+      { text: '电脑网络排障', link: '/network-troubleshooting/' },
+      {
+        text: '关于/合规',
+        items: [
+          { text: '关于我们', link: '/about' },
+          { text: '评测方法论', link: '/methodology' },
+          { text: '商业推广披露', link: '/disclosure' },
+          { text: '用户隐私政策', link: '/privacy' },
+          { text: '服务使用条款', link: '/terms' }
+        ]
+      }
     ],
     sidebar: {
       '/pc/': [
@@ -170,7 +203,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com' }
     ],
     footer: {
-      message: '本站所有技术评测与网络架构解析仅供学习交流与合规配置参考，请自觉遵守属地网络法律法规。',
+      message: '<div style="margin-bottom:8px;font-size:12px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;"><a href="/about" style="color:#38bdf8;text-decoration:none;">关于我们</a><span style="color:#334155;">·</span><a href="/methodology" style="color:#38bdf8;text-decoration:none;">评测方法论</a><span style="color:#334155;">·</span><a href="/disclosure" style="color:#38bdf8;text-decoration:none;">推广披露</a><span style="color:#334155;">·</span><a href="/privacy" style="color:#38bdf8;text-decoration:none;">隐私政策</a><span style="color:#334155;">·</span><a href="/terms" style="color:#38bdf8;text-decoration:none;">服务条款</a></div>本站所有技术评测与网络架构解析仅供学习交流与合规配置参考，请自觉遵守属地网络法律法规。',
       copyright: 'Copyright © 2026 tizishangwang.world 梯子上网 | All Rights Reserved.'
     }
   }

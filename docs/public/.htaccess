@@ -2,9 +2,9 @@
   RewriteEngine On
   RewriteBase /
 
-  # 强制 HTTPS (按需启用)
-  # RewriteCond %{HTTPS} !=on
-  # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  # 强制 HTTPS 301 重定向
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
   # 规范化去除尾部斜杠（除了目录）
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -48,4 +48,5 @@
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>

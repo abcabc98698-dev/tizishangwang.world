@@ -1,3 +1,11 @@
+---
+sitemap: false
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
+
 # tizishangwang.world 全网 Topic Cluster 蜂巢式内容拓扑大系白皮书
 
 > **架构标准**：本知识库围绕「一级导航 → 二级专题（8~12个搜索意图分类） → 三级内容集群（每个2个独立维度） → 完整SEO文章标题（每个集群3~4篇独立增量长文）」进行蜂巢式内链设计，全面适配 Google、Bing 及 AI 搜索引擎（ChatGPT Search、Perplexity、Google AI Overviews）。

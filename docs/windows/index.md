@@ -72,7 +72,7 @@ Windows 操作系统的网络架构经过数十年演进，形成了“应用层
 
 ---
 
-## 二、系统代理（System Proxy）vs TUN 虚拟网卡模式深度实战
+## 二、系统代理（System Proxy）vs TUN 虚拟网卡模式深度实战 {#system-proxy-vs-tun}
 
 许多 Windows 用户常遇到的困惑是：“明明电脑梯子已经连上了，为什么在终端里 `git clone` 还是超时？为什么 Steam 游戏还是连不上外服？” 答案就在于模式的区别。
 
@@ -93,7 +93,7 @@ Windows 操作系统的网络架构经过数十年演进，形成了“应用层
 
 ---
 
-## 三、Windows 首选客户端：Clash Verge Rev 深度实操全攻略
+## 三、Windows 首选客户端：Clash Verge Rev 深度实操全攻略 {#clash-verge-tutorial}
 
 Clash Verge Rev 是目前 Windows 平台维护最为活跃、体验最为顶尖的现代化代理客户端。
 
@@ -121,7 +121,7 @@ Clash Verge Rev 是目前 Windows 平台维护最为活跃、体验最为顶尖�
 
 ---
 
-## 四、极客备用：v2rayN 多核心客户端深度配置
+## 四、极客备用：v2rayN 多核心客户端深度配置 {#v2rayn-tutorial}
 
 对于熟悉各种底层传输协议的进阶极客，v2rayN 是功能极为强大的综合工具箱。
 
@@ -135,7 +135,7 @@ v2rayN 启动依赖微软官方运行时。如果双击 `v2rayN.exe` 弹出错�
 
 ---
 
-## 五、Windows UWP 应用回环隔离限制（UWP Loopback Isolation）终极破解
+## 五、Windows UWP 应用回环隔离限制（UWP Loopback Isolation）终极破解 {#uwp-loopback}
 
 Windows 10 和 11 引入了强大的安全沙箱体系：所有通过 Microsoft Store 下载安装的 **UWP（通用 Windows 平台）应用**（包括 Windows 自带的邮件、Xbox、天气、甚至 Telegram 微软商店版），都被隔离在一个名为 **AppContainer** 的独立安全沙箱中。
 
@@ -159,7 +159,7 @@ CheckNetIsolation.exe LoopbackExempt -a -n="Microsoft.WindowsStore_8wekyb3d8bbwe
 
 ---
 
-## 六、Windows 7 大典型网络断网排障大系 (Troubleshooting Matrix)
+## 六、Windows 7 大典型网络断网排障大系 (Troubleshooting Matrix) {#troubleshooting-7}
 
 遇到 Windows 连不上网时，请按照下方排查矩阵顺次定位：
 

@@ -48,11 +48,11 @@ export default defineConfig({
           text: '电脑翻墙知识大系',
           items: [
             { text: '电脑翻墙全景图谱与选型 (总览)', link: '/pc/' },
-            { text: '翻墙底层原理：VPN 与代理差异', link: '/pc/#vpn-vs-proxy' },
-            { text: '电脑首次上网完整闭环流程', link: '/pc/#getting-started' },
-            { text: '协议层解密：Shadowsocks 到 VLESS', link: '/pc/#protocols' },
-            { text: '专线 vs 公网中转 vs 直连', link: '/pc/#lines-comparison' },
-            { text: '常见网络安全与法律合规红线', link: '/pc/#security-compliance' }
+            { text: '翻墙底层原理：VPN 与代理差异', link: '/pc/vpn-vs-proxy' },
+            { text: '电脑首次上网完整闭环流程', link: '/pc/getting-started' },
+            { text: '协议层解密：Shadowsocks 到 VLESS', link: '/pc/protocols' },
+            { text: '专线 vs 公网中转 vs 直连', link: '/pc/lines-comparison' },
+            { text: '常见网络安全与法律合规红线', link: '/pc/security-compliance' }
           ]
         }
       ],
@@ -61,11 +61,11 @@ export default defineConfig({
           text: 'Windows 科学上网宝典',
           items: [
             { text: 'Windows 11/10 代理配置总纲', link: '/windows/' },
-            { text: '系统代理 vs TUN 虚拟网卡实战', link: '/windows/#system-proxy-vs-tun' },
-            { text: 'Clash Verge Rev 深度实操指南', link: '/windows/#clash-verge-tutorial' },
-            { text: 'v2rayN 极客与多核心配置', link: '/windows/#v2rayn-tutorial' },
-            { text: 'UWP 应用回环代理与解除限制', link: '/windows/#uwp-loopback' },
-            { text: 'Windows 7 大典型断网排障大系', link: '/windows/#troubleshooting-7' }
+            { text: '系统代理 vs TUN 虚拟网卡实战', link: '/windows/system-proxy-vs-tun' },
+            { text: 'Clash Verge Rev 深度实操指南', link: '/windows/clash-verge-tutorial' },
+            { text: 'v2rayN 极客与多核心配置', link: '/windows/v2rayn-tutorial' },
+            { text: 'UWP 应用回环代理与解除限制', link: '/windows/uwp-loopback' },
+            { text: 'Windows 7 大典型断网排障大系', link: '/windows/troubleshooting-7' }
           ]
         }
       ],
@@ -74,9 +74,10 @@ export default defineConfig({
           text: 'Mac 科学上网指南',
           items: [
             { text: 'macOS 科学上网全景选型', link: '/mac/' },
-            { text: 'Apple Silicon (M1/M2/M3/M4) 适配', link: '/mac/#apple-silicon' },
-            { text: '系统代理与 Network Extension 权限', link: '/mac/#network-extension' },
-            { text: 'Surge / Clash Verge / FlClash 横评', link: '/mac/#client-comparison' }
+            { text: 'Apple Silicon (M1/M2/M3/M4) 适配', link: '/mac/apple-silicon' },
+            { text: '系统代理与 Network Extension 权限', link: '/mac/network-extension' },
+            { text: 'Surge / Clash Verge / FlClash 横评', link: '/mac/client-comparison' },
+            { text: 'Mac 终端命令行代理加速实战', link: '/mac/terminal-proxy' }
           ]
         }
       ],
@@ -85,10 +86,10 @@ export default defineConfig({
           text: '代理客户端矩阵',
           items: [
             { text: '客户端下载与选型总览', link: '/clients/' },
-            { text: 'Clash Verge Rev (Mihomo 内核)', link: '/clients/#clash-verge-rev' },
-            { text: 'v2rayN (Xray / sing-box 核心)', link: '/clients/#v2rayn' },
-            { text: 'FlClash (全平台极简)', link: '/clients/#flclash' },
-            { text: 'Hiddify (现代多协议多平台)', link: '/clients/#hiddify' }
+            { text: 'Clash Verge Rev (Mihomo 内核)', link: '/clients/clash-verge-rev' },
+            { text: 'v2rayN (Xray / sing-box 核心)', link: '/clients/v2rayn' },
+            { text: 'FlClash (全平台极简)', link: '/clients/flclash' },
+            { text: 'Hiddify (现代多协议多平台)', link: '/clients/hiddify' }
           ]
         }
       ],
@@ -97,9 +98,9 @@ export default defineConfig({
           text: '梯子推荐与决策指南',
           items: [
             { text: '电脑好用梯子综合排行动', link: '/ladder/' },
-            { text: '长时间稳定跨境办公方案', link: '/ladder/#office-work' },
-            { text: '高性价比月付低预算首选', link: '/ladder/#budget-options' },
-            { text: '多设备与家庭团队并发方案', link: '/ladder/#multi-devices' }
+            { text: '长时间稳定跨境办公方案', link: '/ladder/office-work' },
+            { text: '高性价比月付低预算首选', link: '/ladder/budget-options' },
+            { text: '多设备与家庭团队并发方案', link: '/ladder/multi-devices' }
           ]
         }
       ],
@@ -108,10 +109,10 @@ export default defineConfig({
           text: '机场深度实测与横评',
           items: [
             { text: '2026 机场梯队实测全景', link: '/airport/' },
-            { text: '光速云 (IEPL 双专线主推评测)', link: '/airport/#guangshuyun' },
-            { text: '飞猫云 (专属客户端新手评测)', link: '/airport/#feimao' },
-            { text: '微风网络 (原生 IP 专线评测)', link: '/airport/#weifeng' },
-            { text: '流媒体与 AI 解锁能力排行榜', link: '/airport/#streaming-matrix' }
+            { text: '光速云 (IEPL 双专线主推评测)', link: '/airport/guangshuyun' },
+            { text: '飞猫云 (专属客户端新手评测)', link: '/airport/feimao' },
+            { text: '微风网络 (原生 IP 专线评测)', link: '/airport/weifeng' },
+            { text: '流媒体与 AI 解锁能力排行榜', link: '/airport/streaming-matrix' }
           ]
         }
       ],
@@ -119,10 +120,11 @@ export default defineConfig({
         {
           text: '免费机场与低成本方案',
           items: [
-            { text: '免费电脑节点可用性与安全红线', link: '/free/' },
-            { text: '免费试用机场的鉴别与避坑', link: '/free/#free-trial' },
-            { text: '软件免费 vs 节点免费的本质区别', link: '/free/#software-vs-service' },
-            { text: '低价月付与不限时流量包替代法', link: '/free/#budget-alternatives' }
+            { text: '免费机场与低成本方案 (总览)', link: '/free/' },
+            { text: '免费电脑节点可用性与安全红线', link: '/free/security-risks' },
+            { text: '免费试用机场的鉴别与避坑', link: '/free/free-trial' },
+            { text: '软件免费 vs 节点免费的本质区别', link: '/free/software-vs-service' },
+            { text: '低价付费替代与不限时流量包', link: '/free/budget-alternatives' }
           ]
         }
       ],
@@ -131,10 +133,10 @@ export default defineConfig({
           text: '电脑网络诊断与排障全书',
           items: [
             { text: '电脑网络问题诊断决策流', link: '/network-troubleshooting/' },
-            { text: '设置代理后网页无法打开排查', link: '/network-troubleshooting/#browser-fail' },
-            { text: '客户端报错与 TUN 虚拟网卡冲突', link: '/network-troubleshooting/#tun-conflict' },
-            { text: 'DNS 污染、泄露与 hosts 锁死', link: '/network-troubleshooting/#dns-issues' },
-            { text: '手机能连电脑连不上的差异排障', link: '/network-troubleshooting/#pc-vs-phone' }
+            { text: '设置代理后网页无法打开排查', link: '/network-troubleshooting/browser-fail' },
+            { text: '客户端报错与 TUN 虚拟网卡冲突', link: '/network-troubleshooting/tun-conflict' },
+            { text: 'DNS 污染、泄露与 hosts 锁死', link: '/network-troubleshooting/dns-issues' },
+            { text: '手机能连电脑连不上的差异排障', link: '/network-troubleshooting/pc-vs-phone' }
           ]
         }
       ]

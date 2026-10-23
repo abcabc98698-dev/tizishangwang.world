@@ -26,7 +26,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 一、Apple Silicon (M1/M2/M3/M4) 与 Intel 架构底层深度解析
+## 一、Apple Silicon (M1/M2/M3/M4) 与 Intel 架构底层深度解析 {#apple-silicon}
 
 自 2020 年苹果发布 M1 芯片起，Mac 全面进入 ARM 架构时代。由于指令集体系（ISA）与内存架构的根本差异，Mac 电脑在运行网络代理软件时展现出与 Windows 完全不同的技术特征。
 
@@ -63,7 +63,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 二、macOS 核心客户端技术横评：Surge vs Clash Verge Rev vs FlClash
+## 二、macOS 核心客户端技术横评：Surge vs Clash Verge Rev vs FlClash {#client-comparison}
 
 在 macOS 生态下，客户端的竞争主要聚焦在三大技术流派：
 
@@ -79,7 +79,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 三、macOS Network Extension 系统网络扩展与权限全景图
+## 三、macOS Network Extension 系统网络扩展与权限全景图 {#network-extension}
 
 不同于 Windows 采用的 Wintun 虚拟网卡，macOS 采用极为严格的沙盒与系统扩展架构。
 

@@ -25,7 +25,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 一、电脑网络通信底层原理：数据包是如何被拦截与转发的？
+## 一、电脑网络通信底层原理：数据包是如何被拦截与转发的？ {#network-principles}
 
 理解电脑翻墙的运作机制，首先需要看清计算机在未翻墙状态与翻墙状态下的数据流向对比。
 
@@ -63,7 +63,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 二、网络代理（Proxy）vs 传统虚拟专用网（VPN）深度技术对比
+## 二、网络代理（Proxy）vs 传统虚拟专用网（VPN）深度技术对比 {#vpn-vs-proxy}
 
 很多刚接触电脑翻墙的用户经常将“梯子”、“代理”与“VPN”混为一谈。事实上，两者在设计目标、加密方式与审查生存能力上存在云泥之别：
 
@@ -94,7 +94,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 三、传输线路架构全景：直连 vs 公网中转 vs IEPL/IPLC 跨境专线
+## 三、传输线路架构全景：直连 vs 公网中转 vs IEPL/IPLC 跨境专线 {#lines-comparison}
 
 跨境物理线路是决定电脑翻墙网速、延迟与晚高峰稳定性的决定性瓶颈。
 
@@ -118,7 +118,7 @@ import { AIRPORTS } from '../data/airports';
 
 ---
 
-## 四、主流抗审查协议演进全景 (Protocol Evolution)
+## 四、主流抗审查协议演进全景 (Protocol Evolution) {#protocols}
 
 从最早的 SOCKS5 到当下的现代抗封锁协议，协议层经历了四代重大技术革新：
 
@@ -135,7 +135,7 @@ Shadowsocks (SS)    ──▶  VMess (V2Ray 核心)  ──▶  Trojan / VLESS  
 
 ---
 
-## 五、新手电脑翻墙端到端完整起步闭环 (Onboarding Loop)
+## 五、新手电脑翻墙端到端完整起步闭环 (Onboarding Loop) {#getting-started}
 
 为了让初次接触电脑网络配置的用户在 5 分钟内顺利连通外网，以下整理了标准规范的三步闭环操作法：
 
@@ -152,7 +152,7 @@ Shadowsocks (SS)    ──▶  VMess (V2Ray 核心)  ──▶  Trojan / VLESS  
 
 ---
 
-## 六、巨幅品牌综合对比大表与变现直达卡片
+## 六、巨幅品牌综合对比大表与变现直达卡片 {#comparison-table}
 
 为帮助您精准匹配预算与场景，下方精选了当前在电脑端表现最为卓越的专线与高性价比代表方案：
 
@@ -168,7 +168,7 @@ Shadowsocks (SS)    ──▶  VMess (V2Ray 核心)  ──▶  Trojan / VLESS  
 
 ---
 
-## 七、电脑网络安全与隐私防范红线 (Security Redlines)
+## 七、电脑网络安全与隐私防范红线 (Security Redlines) {#security-compliance}
 
 电脑作为存储个人核心数据与生产力机密的终端设备，在使用翻墙网络时必须时刻保持安全警惕：
 

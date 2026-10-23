@@ -166,3 +166,51 @@ body {
   transform: rotate(12deg) scale(1.08);
   border-color: #38bdf8 !important;
 }
+
+/* Container max-width optimization for technical observatory layout */
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .content-container {
+    max-width: 840px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .content-container {
+    max-width: 920px !important;
+  }
+}
+
+/* Sleek dark observatory scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Smooth typography and anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+.vp-doc h2 .header-anchor,
+.vp-doc h3 .header-anchor {
+  color: #38bdf8;
+  opacity: 0.6;
+}
+
+.vp-doc h2:hover .header-anchor,
+.vp-doc h3:hover .header-anchor {
+  opacity: 1;
+}

@@ -20,7 +20,7 @@
           <span class="arrow-indicator">↗</span>
         </div>
         <div class="card-name">{{ item.title }}</div>
-        <div class="card-desc">{{ item.description }}</div>
+        <div class="card-desc">{{ item.description || item.desc }}</div>
         <div class="card-tags" v-if="item.tags && item.tags.length">
           <span class="tag-pill" v-for="tag in item.tags" :key="tag">{{ tag }}</span>
         </div>
@@ -34,7 +34,8 @@ interface ClusterItem {
   title: string;
   link: string;
   badge?: string;
-  description: string;
+  description?: string;
+  desc?: string;
   tags?: string[];
 }
 
